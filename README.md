@@ -1,7 +1,7 @@
 ***************** with docker configuration ******************
 
 1.) make sure docker is up in your machine.
-2.) simply run "docker-compose up --build"
+2.) Go to the project folder and simply run "docker-compose up --build"
 3.) you can check on the api in swagger by "http://localhost:8080/swagger-ui/index.html"
 4.) check the h2 database by "http://localhost:8080/h2-console" and enter,
             - url: jdbc:h2:mem:pettracker
