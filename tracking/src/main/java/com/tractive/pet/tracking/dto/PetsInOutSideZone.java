@@ -9,6 +9,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class PetsInOutSideZone {
+	
 	private PetType petType;
 	private TrackerType trackerType;
 	private Long count;

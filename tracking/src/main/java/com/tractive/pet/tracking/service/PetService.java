@@ -10,8 +10,6 @@ import com.tractive.pet.tracking.model.Pet;
 public interface PetService {
 
 	Pet savePet(PetRequest pet) throws Exception;
-	//Map<String, Long> getPetsCountOutsideZone();
-	//Map<PetType, Long> getPetsCountOutsideZone();
 	Map<PetType, Map<TrackerType, Long>> getPetsCountOutsideZone();
 		
 }
