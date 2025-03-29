@@ -44,6 +44,12 @@ public class PetTrackingServiceImpl implements PetService {
 	}
 
 	
+	@Override
+	public List<Pet> getAllListOfPets() {
+		log.info("Calling All Pets in Database..!!");
+		return repository.findAll();
+	}
+	
 
 	@Override
 	public Map<PetType, Map<TrackerType, Long>> getPetsCountOutsideZone() {
@@ -69,6 +75,8 @@ public class PetTrackingServiceImpl implements PetService {
 			throw ex;
 		}
 	}
+	
+	
 
 	private void validateTrackerType(PetRequest request) throws Exception {
 		
@@ -117,5 +125,7 @@ public class PetTrackingServiceImpl implements PetService {
 		pet.setOwnerId(request.getOwnerId());
 		pet.setInZone(request.isInZone());
 	}
+
+	
 
 }

@@ -1,5 +1,6 @@
 package com.tractive.pet.tracking.controller;
 
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,11 @@ public class TrackingPetController {
 	@PostMapping("/add")
 	public ResponseEntity<Pet> addingPet(@RequestBody PetRequest request) throws Exception {
 		return ResponseEntity.ok(trackingServie.savePet(request));
+	}
+	
+	@GetMapping("/getallpets")
+	public ResponseEntity<List<Pet>> getallPets() {
+		return ResponseEntity.ok(trackingServie.getAllListOfPets());
 	}
 
 	@GetMapping("/track/outside-zone")
